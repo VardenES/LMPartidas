@@ -14,8 +14,48 @@
 	<!-- google fonts  -->
 	<link href="//fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700,700i" rel="stylesheet">
 	<link href="//fonts.googleapis.com/css?family=Josefin+Sans:300,400,400i,700" rel="stylesheet">
+
+<script>
+window.onload = function() {
+  // dias is an object but you can think of it as a lookup table
+  var dias = {
+        'Viernes': ['17:00', '17:15', '17:30', '17:45', '18:00', '18:15', '18:30', '18:45', '19:00', '19:15', '19:30', '19:45', '20:00', '20:15'],
+        'Sábado': ['10:00', '10:15', '10:30', '10:45', '11:00', '11:15', '11:30', '11:45', '12:00', '12:15', '12:30', '12:45', '13:00', '13:15'],        
+        'Domingo': ['10:30', '10:15', '10:30', '10:45', '11:00', '11:15', '11:30', '11:45', '12:00', '12:15', '12:30', '12:45', '13:00', '13:15']
+      },
+      // just grab references to the two drop-downs
+      dia_select = document.querySelector('#dia'),
+      hora_select = document.querySelector('#hora');
+
+  // populate the provinces drop-down
+  setOptions(dia_select, Object.keys(dias));
+  // populate the town drop-down
+  setOptions(hora_select, dias[dia_select.value]);
+  
+  // attach a change event listener to the provinces drop-down
+  dia_select.addEventListener('change', function() {
+    // get the towns in the selected province
+    setOptions(hora_select, dias[dia_select.value]);
+  });
+    
+  function setOptions(dropDown, options) {
+    // clear out any existing values
+    dropDown.innerHTML = '';
+    // insert the new options into the drop-down
+    options.forEach(function(value) {
+      dropDown.innerHTML += '<option name="' + value + '">' + value + '</option>';
+    });
+  }  
+};
+</script>
+
 </head>
 <body>
+
+
+
+
+
 	<div class="w3ls-banner">
 	<div class="heading">
 		<h1>Formulario de Actividades</h1>
@@ -32,9 +72,10 @@
 					<fieldset>
 						<legend align="right">PARTIDA</legend>
 
+
 						<li>
 							<label class="form-label"> 
-								Nombre del Juego 
+								Nombre del Juego (Ver <a href="http://leaverou.github.io/awesomplete/">Autocompletar</a>)
 								<span class="form-required"> * </span>
 							</label>
 							<div class="form-input">
@@ -75,36 +116,17 @@
 							   <span class="form-required"> * </span>
 							</label>
 							<div class="form-input dob">
-								<span class="form-sub-label">
-								<select class="form-dropdown" name="tipo" required>
-									<option value="nivel-0"> &nbsp; </option>					
-									<option value="nivel-1"> Viernes </option>
-									<option value="nivel-2"> Sábado </option>
-									<option value="nivel-3"> Domingo </option>
-								</select>
+								<span class="form-sub-label">							
+									<select id="dia" name="dia"></select>
 									<label class="form-sub-label1"> Día </label>
 								</span>
 								<span class="form-sub-label">
-									<select name="month">
-										<option>&nbsp;</option>
-										<option value="January"> January </option>
-										<option value="February"> February </option>
-										<option value="March"> March </option>
-										<option value="April"> April </option>
-										<option value="May"> May </option>
-										<option value="June"> June </option>
-										<option value="July"> July </option>
-										<option value="August"> August </option>
-										<option value="September"> September </option>
-										<option value="October"> October </option>
-										<option value="November"> November </option>
-										<option value="December"> December </option>
-									 </select>
+									<select id="hora" name="hora"></select>
 									<label class="form-sub-label1"> Hora </label>
 								</span>
 								<span class="form-sub-label">
 									<select name="duracion" required>
-										<option value="nivel-0"> &nbsp; </option>					
+										<option value="nivel-0" selected> &nbsp; </option>					
 										<option value="nivel-1"> 1 Hora </option>
 										<option value="nivel-2"> 1 Hora y media </option>
 										<option value="nivel-3"> 2 Horas </option>
@@ -174,6 +196,30 @@
 							</div>
 						</li>
 					</fieldset>
+
+<div class="form-input2">
+	<li> 
+		<label class="form-label1">
+			Por si meto para juegos que cargue de BBDD y asi esté vinculado con portada:
+		</label>
+								<select class="form-dropdown" name="tipo" required>
+									<?php
+										$names = array ("Uno"=>"Uno", "Dos"=>"Dos", "Tres"=>"Tres", "Cuatro"=>"Cuatro");
+
+
+										foreach($names as $name) { ?>
+											<option value="<?php echo $name ?>"> <?php echo $name ?> </option>
+									<?php 
+									} ?>
+									
+									<option value="nivel-0"> &nbsp; </option>					
+									<option value="nivel-1"> Viernes </option>
+									<option value="nivel-2"> Sábado </option>
+									<option value="nivel-3"> Domingo </option>
+								</select>
+							</div>
+						</li>
+
 
 					</ul>
 					<input type="submit" value="Quiero dirigir">
