@@ -22,3 +22,9 @@ Route::get('/create', function(){
 Route::get('/register', function(){
 	return view('register');
 });
+
+
+
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});
