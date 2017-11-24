@@ -77,12 +77,49 @@
                 </div>
             @endif
 
+
+
+
+
+
             <div class="content">
                 <div class="title m-b-md">
                     Laravel
                 </div>
 
+
+<?php //@if (Route::has('login')) ?>
+        <div class="">
+            @if (!Auth::check())
+                <a href="{{ url('/home') }}">Home</a>
+                <p>HOLA MUNDO!!</p>
+            @else
+                <a href="{{ url('/login') }}">Login</a>
+                <a href="{{ url('/register') }}">Register</a>
+                <p>ADIOS!!</p>
+            @endif
+        </div>
+<?php //@endif ?>
+
+
+@if (!Auth::guest())
+    <a href="{{ url('admin/login') }}">Login</a>
+    <a href="{{ url('/register') }}">Register</a>
+    <p>ADIOS!!</p>
+@else
+    <p>HOLAAAAA!!</p>
+
+@endif
+
+
+
                 <div class="links">
+                    <a href="index.php/inicio">Inicio</a>
+                    <a href="index.php/noticias">Noticias</a>
+                    <a href="index.php/inicio">Información</a>
+                    <a href="index.php/inicio">Actividades</a>
+                    <a href="index.php/inicio">Contacto</a>
+
                     <a href="https://laravel.com/docs">Documentation</a>
                     <a href="https://laracasts.com">Laracasts</a>
                     <a href="https://laravel-news.com">News</a>
