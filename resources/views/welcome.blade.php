@@ -102,8 +102,8 @@
 <?php //@endif ?>
 
 
-@if (!Auth::guest())
-    <a href="{{ url('admin/login') }}">Login</a>
+@if (Auth::guest())
+    <a href="{{ url('index.php/admin/login') }}">Login</a>
     <a href="{{ url('/register') }}">Register</a>
     <p>ADIOS!!</p>
 @else
