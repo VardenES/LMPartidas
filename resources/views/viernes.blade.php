@@ -15,6 +15,13 @@
 				<a href="http://localhost/LMPArtidas/public/index.php/post/{{ $post->slug }}">
 					<img src="{{ Voyager::image( $post->image ) }}" style="width:100%">
 					<span>{{ $post->title }}</span>
+					<span>{{ $post->meta_keywords }}</span>
+					<span><?php var_dump($post->meta_keywords); ?></span>
+					@if ($post->meta_keywords == "Partida de Rol")
+						<p>Que cabrones, que van a jugar!</p>
+
+
+					@endif
 				</a>
 			</div>
 		@endforeach

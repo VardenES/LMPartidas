@@ -45,6 +45,14 @@ Route::get('/actividades/{slug}', function ($slug) {
 	return view('viernes', compact('posts'));
 });
 
+Route::get('/usuarios', function () {
+	$usuarios = App\User::all();
+	return view('usuarios', compact('usuarios'));
+});
+
+
+
+
 
 
 // https://devdojo.com/blog/tutorials/working-with-voyager-on-the-front-end
@@ -62,3 +70,21 @@ Route::group(['prefix' => 'admin'], function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+/*
+Inicio
+Noticias
+Información
+- Como llegar
+- Instalaciones
+- ...
+Actividades
+- Partida de Rol
+- Rol en Vivo
+- Juegos de Mesa
+Contacto
+- Proponer actividad
+- Inscribir
+
+*/
