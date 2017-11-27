@@ -66,7 +66,7 @@
                             <label for="poblacion" class="col-md-4 control-label">Sexo</label>
 
                             <div class="col-md-6">                           
-                                <select name="gender" id="gender" class="form-control">
+                                <select name="gender" id="gender" class="form-control" value="{{ old('gender') }}" required autofocus>
                                     <option value="" selected="selected"></option>
                                     <option value="hombre">Hombre</option>
                                     <option value="mujer">Mujer</option>
@@ -85,6 +85,21 @@
                                 @if ($errors->has('telefono'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('telefono') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+ <!-- Código Postal -->
+                        <div class="form-group{{ $errors->has('cp') ? ' has-error' : '' }}">
+                            <label for="cp" class="col-md-4 control-label">Código Postal</label>
+
+                            <div class="col-md-6">
+                                <input id="cp" type="text" class="form-control" name="cp" value="{{ old('cp') }}" required autofocus>
+
+                                @if ($errors->has('cp'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('cp') }}</strong>
                                     </span>
                                 @endif
                             </div>
