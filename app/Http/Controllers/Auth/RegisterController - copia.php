@@ -54,6 +54,7 @@ class RegisterController extends Controller
 
             'nombre' => 'required|string|max:255',
             'apellidos' => 'required|string|max:255',
+            'birthday' => 'required',
             'telefono' => 'required|regex:/[0-9]{9}/',
             'cp' => 'required|regex:/[0-9]{5}/',
             'poblacion' => 'required|string|max:255',
@@ -77,7 +78,9 @@ class RegisterController extends Controller
 
             'nombre' => $data['nombre'],
             'apellidos' => $data['apellidos'],
-
+            'birthday_day' => $data['birthday_day'],
+            'birthday_month' => $data['birthday_month'],
+            'birthday_year' => $data['birthday_year'],
             'gender' => $data['gender'],
             'telefono' => $data['telefono'],
             'cp' => $data['cp'],

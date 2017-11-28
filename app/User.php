@@ -5,6 +5,8 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
+use Illuminate\Database\Eloquent\Model;
+
 class User extends \TCG\Voyager\Models\User
 {
     use Notifiable;
@@ -16,7 +18,7 @@ class User extends \TCG\Voyager\Models\User
      */
     protected $fillable = [
         'name', 'email', 'password', 
-        'nombre', 'apellidos', 'gender', 'telefono', 'cp', 'poblacion', 'provincia', 'club',
+        'nombre', 'apellidos', 'birthday_day', 'birthday_month', 'birthday_year', 'gender', 'telefono', 'cp', 'poblacion', 'provincia', 'club',
          
 
     ];
@@ -29,4 +31,30 @@ class User extends \TCG\Voyager\Models\User
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function activities()
+    {
+        return $this->hasMany('App\Activities','author_id');
+    }
+
+    public function can_post()
+    {
+        $role = $this->role;
+        if($role == 'user' || $role == 'admin')
+        {
+            return true;
+        }
+        return false;
+    }
+
+    public function is_admin()
+    {
+        $role = $this->role;
+        if($role == 'admin')
+        {
+            return true;            
+        }
+        return false;
+    }
+
 }

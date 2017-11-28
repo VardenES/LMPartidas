@@ -55,6 +55,12 @@ Route::get('/usuarios', function () {
 
 
 
+
+
+
+
+
+
 // https://devdojo.com/blog/tutorials/working-with-voyager-on-the-front-end
 
 Route::get('login', function(){
@@ -88,3 +94,33 @@ Contacto
 - Inscribir
 
 */
+
+
+
+// ACTIVIDADES //
+
+	// show new activity form
+	Route::get('new-activity','ActivityController@create');
+	// save new activity
+	Route::post('new-activity','ActivityController@store');
+	// edit post form
+	Route::get('edit/{slug}','ActivityController@edit');
+	// update post
+	Route::post('update','ActivityController@update');
+	// delete post
+	Route::get('delete/{id}','ActivityController@destroy');
+	// display user's all posts
+	Route::get('my-all-posts','UserController@user_posts_all');
+	// display user's drafts
+	Route::get('my-drafts','UserController@user_posts_draft');
+
+
+	//users profile
+	Route::get('user/{id}','UserController@profile')->where('id', '[0-9]+');
+	// display list of posts
+	Route::get('user/{id}/posts','UserController@user_posts')->where('id', '[0-9]+');
+	// display single post
+	Route::get('/{slug}',['as' => 'post', 'uses' => 'ActivityController@show'])->where('slug', '[A-Za-z0-9-_]+');
+
+
+});
