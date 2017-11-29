@@ -93,11 +93,15 @@ Contacto
 - Proponer actividad
 - Inscribir
 
+});
+
 */
 
 
 
 // ACTIVIDADES //
+
+	Route::get('actividades','ActivityController@index');
 
 	// show new activity form
 	Route::get('new-activity','ActivityController@create');
@@ -123,4 +127,3 @@ Contacto
 	Route::get('/{slug}',['as' => 'post', 'uses' => 'ActivityController@show'])->where('slug', '[A-Za-z0-9-_]+');
 
 
-});
