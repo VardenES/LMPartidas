@@ -131,3 +131,9 @@ Route::get('bladetemplate', function (){
 	$drinks = array('Vodka', 'Gin', 'Brandy');
 	return view('luduspage', array('name' => 'The Raven', 'day' => 'Friday', 'drinks' => $drinks));
 });
+
+
+Route::get('bootstrap', function (){
+	$drinks = array('Vodka', 'Gin', 'Brandy');
+	return view('bootstrappage', array('name' => 'The Raven', 'day' => 'Friday', 'drinks' => $drinks));
+});
