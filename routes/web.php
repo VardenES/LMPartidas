@@ -101,22 +101,22 @@ Contacto
 
 // ACTIVIDADES //
 
-	Route::get('actividades','ActivityController@index');
+	//Route::get('actividades','ActivityController@index');
 
 	// show new activity form
-	Route::get('new-activity','ActivityController@create');
+	//Route::get('new-activity','ActivityController@create');
 	// save new activity
-	Route::post('new-activity','ActivityController@store');
+	//Route::post('new-activity','ActivityController@store');
 	// edit post form
-	Route::get('edit/{slug}','ActivityController@edit');
+	//Route::get('edit/{slug}','ActivityController@edit');
 	// update post
-	Route::post('update','ActivityController@update');
+	//Route::post('update','ActivityController@update');
 	// delete post
-	Route::get('delete/{id}','ActivityController@destroy');
+	//Route::get('delete/{id}','ActivityController@destroy');
 	// display user's all posts
-	Route::get('my-all-posts','UserController@user_posts_all');
+	//Route::get('my-all-posts','UserController@user_posts_all');
 	// display user's drafts
-	Route::get('my-drafts','UserController@user_posts_draft');
+	//Route::get('my-drafts','UserController@user_posts_draft');
 
 
 	//users profile
@@ -124,6 +124,10 @@ Contacto
 	// display list of posts
 	Route::get('user/{id}/posts','UserController@user_posts')->where('id', '[0-9]+');
 	// display single post
-	Route::get('/{slug}',['as' => 'post', 'uses' => 'ActivityController@show'])->where('slug', '[A-Za-z0-9-_]+');
+	//Route::get('/{slug}',['as' => 'post', 'uses' => 'ActivityController@show'])->where('slug', '[A-Za-z0-9-_]+');
 
 
+Route::get('bladetemplate', function (){
+	$drinks = array('Vodka', 'Gin', 'Brandy');
+	return view('luduspage', array('name' => 'The Raven', 'day' => 'Friday', 'drinks' => $drinks));
+});
