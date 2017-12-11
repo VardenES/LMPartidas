@@ -57,3 +57,16 @@ https://github.com/yingkangfang/blog
 
 Usuarios:
 https://tutorials.kode-blog.com/laravel-authentication-with-password-reset
+
+
+Installation:
+- Clon archive
+- Create DB
+- Config .env
+- composer update --no-scripts
+- php artisan key:generate
+- php artisan config:clear
+- php artisan migrate:reset
+- php artisan migrate:install
+- php artisan migrate
+- php artisan voyager:admin your@email.com --create
