@@ -135,5 +135,7 @@ Route::get('bladetemplate', function (){
 
 Route::get('bootstrap', function (){
 	$drinks = array('Vodka', 'Gin', 'Brandy');
-	return view('bootstrappage', array('name' => 'The Raven', 'day' => 'Friday', 'drinks' => $drinks));
+	$posts = App\Post::orderBy('created_at', 'desc')->take(3)->get();
+
+	return view('bootstrappage', array('name' => 'The Raven', 'day' => 'Friday', 'drinks' => $drinks, 'posts' => $posts));
 });

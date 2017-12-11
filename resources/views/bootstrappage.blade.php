@@ -1,38 +1,53 @@
 @extends('layouts.bootstrap')
 
-@section('title', 'Page Title')
+@section('title', 'Título de la Página Ludus Myrtea')
+
+@section('breadcrumbs', 'home')
 
 @section('sidebar')
 	<p>This is appended to the master sidebar.</p>
 @endsection
 
 @section('content')
-	<h2>{{$name}}</h2>
-	<p>This is my body content.</p>
-	<h2>If Statement</h2>
-	@if ($day == 'Friday')
-		<p>Time to party</p>
-	@else
-		<p>Time to make money</p>
-	@endif
 
-	<h2>Foreach Loop</h2>
-	@foreach ($drinks as $drink)
-		{{$drink}} </br>
-	@endforeach
+<!-- Container (Laravel Section) -->
+	<div id="about" class="container-fluid">
+	  <div class="row slideanim">
+	    <div>
+			<h2>{{$name}}</h2>
+			<p>This is my body content.</p>
+			<h2>If Statement</h2>
+			@if ($day == 'Friday')
+				<p>Time to party</p>
+			@else
+				<p>Time to make money</p>
+			@endif
 
-	<h2>Execute PHP Function</h2>
-	<p>The date is {{date('D M, Y')}}</p>
+			<h2>Foreach Loop</h2>
+			@foreach ($drinks as $drink)
+				{{$drink}} </br>
+			@endforeach
 
-	<p>Ir completando diseño con: https://bootswatch.com/</p>
+{{-- This comment will not be in the rendered HTML --}}
 
-	<h2>Example body text</h2>
-	<p>Nullam quis risus eget <a href="#">urna mollis ornare</a> vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
-	<p><small>This line of text is meant to be treated as fine print.</small></p>
-	<p>The following snippet of text is <strong>rendered as bold text</strong>.</p>
-	<p>The following snippet of text is <em>rendered as italicized text</em>.</p>
-	<p>An abbreviation of the word attribute is <abbr title="attribute">attr</abbr>.</p>
+			<h2>Execute PHP Function</h2>
+			<p>The date is {{date('D M, Y')}}</p>
 
+			<p>Ir completando diseño con: https://bootswatch.com/</p>
+
+			<h2>Example body text</h2>
+			<p>Nullam quis risus eget <a href="#">urna mollis ornare</a> vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
+			<p><small>This line of text is meant to be treated as fine print.</small></p>
+			<p>The following snippet of text is <strong>rendered as bold text</strong>.</p>
+			<p>The following snippet of text is <em>rendered as italicized text</em>.</p>
+			<p>An abbreviation of the word attribute is <abbr title="attribute">attr</abbr>.</p>
+	    </div>
+	  </div>
+	</div>
+
+<div>
+
+</div>
 
 
 	<div class="jumbotron text-center">
@@ -76,6 +91,43 @@
 	    </div>
 	  </div>
 	</div>
+
+<!-- Container (News Section) -->
+	<div id="noticias" class="container-fluid text-center bg-grey">
+	  <div class="row text-center slideanim">
+		@foreach($posts as $post)
+			<div class="col-md-3">
+				<a href="http://localhost/LMPArtidas/public/index.php/post/{{ $post->slug }}">
+					<img src="{{ Voyager::image( $post->image ) }}" style="width:100%">
+					<span>{{ $post->title }}</span>
+				</a>
+			</div>
+		@endforeach
+	  </div>
+	</div>
+
+	<div id="noticias" class="container-fluid text-center bg-grey">
+	  <h2>NOTICIAS</h2>
+	  <br>
+	  <div class="row slideanim">
+	    @foreach($posts as $post)
+	    	<div class="col-sm-4">
+				<a href="http://localhost/LMPArtidas/public/index.php/post/{{ $post->slug }}">
+					<img src="{{ Voyager::image( $post->image ) }}" style="width:100%">
+					<h4>{{ $post->title }}</h4>
+				</a>
+	    	</div>
+	    @endforeach
+	</div>
+
+
+
+
+
+
+
+
+
 
 
 
@@ -151,8 +203,9 @@
 	</div>
 
 
-	<h2>What our customers say</h2>
+
 	<div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+	<h2>What our customers say</h2>
 	  <!-- Indicators -->
 	  <ol class="carousel-indicators">
 	    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
