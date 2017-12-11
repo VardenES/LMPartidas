@@ -69,5 +69,6 @@ Installation:
 - php artisan migrate:reset
 - php artisan migrate:install
 - php artisan migrate
-- php artisan voyager:admin your@email.com --create
 - php artisan voyager:install
+- php artisan voyager:admin your@email.com --create
+
