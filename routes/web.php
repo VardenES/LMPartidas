@@ -139,3 +139,9 @@ Route::get('bootstrap', function (){
 
 	return view('bootstrappage', array('name' => 'The Raven', 'day' => 'Friday', 'drinks' => $drinks, 'posts' => $posts));
 });
+
+
+
+Route::get('myrtea', function (){
+	return view('myrthome');
+});

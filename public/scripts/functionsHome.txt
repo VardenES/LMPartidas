@@ -1,0 +1,57 @@
+$(document).ready(function() {
+    $('.homeHeader > .owl-carousel').owlCarousel({
+        margin: 0,
+        responsiveClass: true,
+        autoplay:true,
+    	autoplayTimeout:5000,
+    	smartSpeed:1000,
+    	autoplayHoverPause:false,
+    	loop:true,
+        responsive: {
+            0: {
+                items: 1,
+                nav: false
+            },
+            578: {
+                items: 1,
+                nav: false
+            },
+            1000: {
+                items: 1,
+                nav: true
+            }
+        }
+    });
+
+    $('.homeNovedadesFinal > .owl-carousel').owlCarousel({
+        margin: 20,
+        responsiveClass: true,
+        autoplay:true,
+        autoplayTimeout:5000,
+        smartSpeed:1000,
+        autoplayHoverPause:true,
+        loop:true,
+        responsive: {
+            0: {
+                items: 1,
+                nav: false,
+                margin: 5
+            },
+            578: {
+                items: 1,
+                nav: true,
+                margin: 20
+            },
+            768: {
+                items: 1,
+                nav: true,
+                margin: 20
+            },
+            1000: {
+                items: 1,
+                nav: true,
+                margin: 20
+            }
+        }
+    })
+});
