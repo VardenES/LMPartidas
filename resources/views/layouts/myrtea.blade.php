@@ -27,32 +27,33 @@
     <nav> 
       <ul class="menu"> 
         <li> 
-          <a href="#">SECCIÓN 1</a> 
-          <ul class="submenu" style="display: none; height: 96px; padding-top: 5px; margin-top: 0px; padding-bottom: 0px; margin-bottom: 0px;"> 
-            <li><a href="#">SUBSECCIÓN 1</a></li> 
-            <li><a href="#">SUBSECCIÓN 2</a></li> 
-            <li><a href="#">SUBSECCIÓN 3</a></li> 
-            <li><a href="#">SUBSECCIÓN 4</a></li> 
-          </ul> 
+          <a href="{{ asset('/index.php/noticias') }}">NOTICIAS</a> 
         </li> 
-        <li> <a>SECCIÓN 2</a> 
-          <ul class="submenu" style="display: none; height: 72px; padding-top: 5px; margin-top: 0px; padding-bottom: 0px; margin-bottom: 0px;"> 
-            <li><a href="#">SUBSECCIÓN 1</a></li> 
-            <li><a href="#">SUBSECCIÓN 2</a></li> 
-            <li><a href="#">SUBSECCIÓN 3</a></li> 
+        <li> <a>INFORMACIÓN</a> 
+          <ul class="submenu" style="display: none; height: 116px; padding-top: 5px; margin-top: 0px; padding-bottom: 0px; margin-bottom: 0px;"> 
+            <li><a href="{{ asset('/index.php/como-llegar') }}">CÓMO LLEGAR</a></li> 
+            <li><a href="{{ asset('/index.php/instalaciones') }}">INSTALACIONES</a></li> 
+            <li><a href="{{ asset('/index.php/faq') }}">F.A.Q.</a></li> 
+            <li><a href="{{ asset('/index.php/normas') }}">NORMAS</a></li>
+            <li><a href="{{ asset('/index.php/lugares') }}">LUGARES DE INTERÉS</a></li>            
           </ul> 
         </li> 
         <li class="logo" style="width: 130px;"> 
           <a href="#"><img src="{{ asset('/img/logo.png') }}" alt="Logo"></a> 
         </li> 
-        <li> <a>SECCIÓN 3</a> 
+        <li> <a>ACTIVIDADES</a> 
           <ul class="submenu" style="display: none; height: 72px; padding-top: 5px; margin-top: 0px; padding-bottom: 0px; margin-bottom: 0px;"> 
-            <li><a href="#">SUBSECCIÓN 1</a></li> 
-            <li><a href="#">SUBSECCIÓN 2</a></li> 
-            <li><a href="#">SUBSECCIÓN 3</a></li> 
+            <li><a href="#">PARTIDAS DE ROL</a></li> 
+            <li><a href="#">ROL EN VIVO</a></li> 
+            <li><a href="#">JUEGOS DE MESA</a></li> 
           </ul> 
         </li> 
-        <li> <a href="#">SECCIÓN 4</a> </li> 
+        <li> <a href="#">CONTACTO</a> 
+          <ul class="submenu" style="display: none; height: 50px; padding-top: 5px; margin-top: 0px; padding-bottom: 0px; margin-bottom: 0px;"> 
+            <li><a href="#">PROPONER ACTIVIDAD</a></li> 
+            <li><a href="#">INSCRIBIR</a></li> 
+          </ul>        
+        </li> 
       </ul> 
       <ul class="idioma"> </ul> 
       <a class="logo" href="#" target="_blank"><img src="{{ asset('/img/pie2.png') }}"></a> 
@@ -376,10 +377,10 @@
     </div> 
     <h2 class="follow">¡Síguenos!</h2> 
     <ul class="social"> 
-      <li class="social"><a href="https://www.facebook.com/#" target="_blank"><span>b</span></a></li> 
-      <li class="social"><a href="https://twitter.com/#" target="_blank"><span>a</span></a></li> 
+      <li class="social"><a href="https://www.facebook.com/ludusmyrtea" target="_blank"><span>b</span></a></li> 
+      <li class="social"><a href="https://twitter.com/LudusMyrtea" target="_blank"><span>a</span></a></li> 
       <li class="social"><a href="https://www.pinterest.com/#/" target="_blank"><span>d</span></a></li> 
-      <li class="social"><a href="https://plus.google.com/+#" target="_blank"><span>c</span></a></li> 
+      <li class="social"><a href="https://plus.google.com/+Ludusmyrtea" target="_blank"><span>c</span></a></li> 
       <li class="social"><a href="https://www.linkedin.com/company/#" target="_blank"><span>j</span></a></li>  
       <li class="social"><a href="https://www.youtube.com/user/#" target="_blank"><span>r</span></a></li> 
       <li class="social"><a href="http://blog.#.info/" target="_blank"><span><i class="fa fa-rss" aria-hidden="true"></i></span></a></li> 
@@ -418,10 +419,10 @@
       <div>  
         <h3>NUESTROS CANALES</h3> 
         <ul class="social"> 
-          <li class="social"><a href="https://www.facebook.com/carretillacomoesnatural" target="_blank"><span>b</span> Facebook</a></li> 
-          <li class="social"><a href="https://twitter.com/ElCarretillero" target="_blank"><span>a</span> Twitter</a></li> 
+          <li class="social"><a href="https://www.facebook.com/ludusmyrtea" target="_blank"><span>b</span> Facebook</a></li> 
+          <li class="social"><a href="https://twitter.com/LudusMyrtea" target="_blank"><span>a</span> Twitter</a></li> 
           <li class="social"><a href="https://www.pinterest.com/carretilla/" target="_blank"><span>d</span> Pinterest</a></li> 
-          <li class="social"><a href="https://plus.google.com/+carretilla" target="_blank"><span>c</span> Google +</a></li> 
+          <li class="social"><a href="https://plus.google.com/+Ludusmyrtea" target="_blank"><span>c</span> Google +</a></li> 
           <li class="social"><a href="https://www.linkedin.com/company/carretilla" target="_blank"><span>j</span> Linkedin</a></li>  
           <li class="social"><a href="https://www.youtube.com/user/carretilla" target="_blank"><span>r</span> YouTube</a></li> 
           <li class="social"><a href="http://blog.carretilla.info/" target="_blank"><span><i class="fa fa-rss" aria-hidden="true"></i></span> Blog</a></li> 

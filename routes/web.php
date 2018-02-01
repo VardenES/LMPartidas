@@ -98,6 +98,30 @@ Contacto
 */
 
 
+// PAGINAS //
+Route::get('/como-llegar', function () {
+	$posts = App\Post::all();
+	return view('noticias', compact('posts'));
+});
+Route::get('/instalaciones', function () {
+	$posts = App\Post::all();
+	return view('noticias', compact('posts'));
+});
+Route::get('/faq', function () {
+	$posts = App\Post::all();
+	return view('noticias', compact('posts'));
+});
+Route::get('/normas', function () {
+	$posts = App\Post::all();
+	return view('noticias', compact('posts'));
+});
+Route::get('/lugares', function () {
+	$posts = App\Post::all();
+	return view('noticias', compact('posts'));
+});
+
+ 
+
 
 // ACTIVIDADES //
 
