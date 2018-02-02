@@ -172,8 +172,8 @@
 
   <section class="homeConservas"> 
     <article class="efecto efecto3 animate3"> 
-      <a href="#"> 
-        <h2>Título 2</h2> 
+      <a href="{{ asset('/index.php/rol') }}"> 
+        <h2>Juegos de Rol</h2> 
         <p>Texto lorem ipsun.</p> 
         <aside><span data-hover="VER MÁS">VER MÁS</span></aside> 
       </a> 
@@ -182,8 +182,8 @@
   </section> 
   <section class="homePlatos"> 
     <article class="efecto efecto2 animate2"> 
-      <a href="#"> 
-        <h2>Título 2</h2> 
+      <a href="{{ asset('/index.php/mesa') }}"> 
+        <h2>Juegos de Mesa</h2> 
         <p>Texto lorem ipsun.</p> 
         <aside><span data-hover="VER MÁS">VER MÁS</span></aside>
       </a> 
@@ -192,8 +192,8 @@
   </section> 
   <section class="homeenLata"> 
     <article class="efecto efecto3 animate3"> 
-      <a href="#"> 
-        <h2>Título 3</h2> 
+      <a href="{{ asset('/index.php/rev') }}"> 
+        <h2>Rol en Vivo</h2> 
         <p>Texto lorem ipsun.</p> 
         <aside><span data-hover="VER MÁS">VER MÁS</span></aside> 
       </a> 
@@ -202,8 +202,8 @@
   </section> 
   <section class="homeCuida"> 
     <article class="efecto efecto3 animate3"> 
-      <a href="#"> 
-        <h2>Título 4</h2> 
+      <a href="{{ asset('/index.php/otras') }}"> 
+        <h2>Otras actividades</h2> 
         <p>Texto lorem ipsun.</p> 
         <aside><span data-hover="VER MÁS">VER MÁS</span></aside> 
       </a> 
@@ -379,11 +379,8 @@
     <ul class="social"> 
       <li class="social"><a href="https://www.facebook.com/ludusmyrtea" target="_blank"><span>b</span></a></li> 
       <li class="social"><a href="https://twitter.com/LudusMyrtea" target="_blank"><span>a</span></a></li> 
-      <li class="social"><a href="https://www.pinterest.com/#/" target="_blank"><span>d</span></a></li> 
+      <li class="social"><a href="https://www.flickr.com/photos/94320221@N08/" target="_blank"><span>v</span></a></li> 
       <li class="social"><a href="https://plus.google.com/+Ludusmyrtea" target="_blank"><span>c</span></a></li> 
-      <li class="social"><a href="https://www.linkedin.com/company/#" target="_blank"><span>j</span></a></li>  
-      <li class="social"><a href="https://www.youtube.com/user/#" target="_blank"><span>r</span></a></li> 
-      <li class="social"><a href="http://blog.#.info/" target="_blank"><span><i class="fa fa-rss" aria-hidden="true"></i></span></a></li> 
     </ul>
   </section>
 
@@ -405,11 +402,12 @@
         </ul> 
       </div> 
       <div> 
-        <h3>SECCIÓN 3</h3> 
+        <h3>ACTIVIDADES</h3> 
         <ul> 
-          <li><a href="#">Subsección 1</a></li> 
-          <li><a href="#">Subsección 2</a></li> 
-          <li><a href="#">Subsección 3</a></li> 
+          <li><a href="{{ asset('/index.php/rol') }}">Juegos de Rol</a></li> 
+          <li><a href="{{ asset('/index.php/mesa') }}">Juegos de Mesa</a></li> 
+          <li><a href="{{ asset('/index.php/rev') }}">Rol en Vivo</a></li> 
+          <li><a href="{{ asset('/index.php/otras') }}">Otras actividades</a></li>
         </ul> 
         <h3>SECCIÓN 4</h3> 
         <ul> 
@@ -421,11 +419,8 @@
         <ul class="social"> 
           <li class="social"><a href="https://www.facebook.com/ludusmyrtea" target="_blank"><span>b</span> Facebook</a></li> 
           <li class="social"><a href="https://twitter.com/LudusMyrtea" target="_blank"><span>a</span> Twitter</a></li> 
-          <li class="social"><a href="https://www.pinterest.com/carretilla/" target="_blank"><span>d</span> Pinterest</a></li> 
+          <li class="social"><a href="https://www.flickr.com/photos/94320221@N08/" target="_blank"><span>v</span> Flickr</a></li> 
           <li class="social"><a href="https://plus.google.com/+Ludusmyrtea" target="_blank"><span>c</span> Google +</a></li> 
-          <li class="social"><a href="https://www.linkedin.com/company/carretilla" target="_blank"><span>j</span> Linkedin</a></li>  
-          <li class="social"><a href="https://www.youtube.com/user/carretilla" target="_blank"><span>r</span> YouTube</a></li> 
-          <li class="social"><a href="http://blog.carretilla.info/" target="_blank"><span><i class="fa fa-rss" aria-hidden="true"></i></span> Blog</a></li> 
         </ul> 
       </div> 
       <div> 

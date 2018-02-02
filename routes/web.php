@@ -119,8 +119,23 @@ Route::get('/lugares', function () {
 	$posts = App\Post::all();
 	return view('noticias', compact('posts'));
 });
-
- 
+// ACTIVIDADES //
+Route::get('/rol', function () {
+	$posts = App\Post::all();
+	return view('noticias', compact('posts'));
+});
+Route::get('/rev', function () {
+	$posts = App\Post::all();
+	return view('noticias', compact('posts'));
+}); 
+Route::get('/mesa', function () {
+	$posts = App\Post::all();
+	return view('noticias', compact('posts'));
+});
+Route::get('/otras', function () {
+	$posts = App\Post::all();
+	return view('noticias', compact('posts'));
+});
 
 
 // ACTIVIDADES //
