@@ -181,6 +181,20 @@ Route::get('bootstrap', function (){
 
 
 
+
+Route::get('/actividades', function () {
+	$actividades = App\Actividade::all();
+	return view('actividades0', compact('actividades'));
+});
+Route::get('/rol', function () {
+	$actividades = App\Actividade::where('tipo', '=', '1')->get();
+	return view('actividades0', compact('actividades'));
+});
+Route::get('/mesa', function () {
+	$actividades = App\Actividade::where('tipo', '=', '2')->get();
+	return view('actividades0', compact('actividades'));
+});
+
 Route::get('myrtea', function (){
 	return view('myrthome');
 });

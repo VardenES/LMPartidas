@@ -1,6 +1,6 @@
     @extends('app')
     @section('title')
-    {{$title}}
+    <?php //{{$title}} ?>
     @endsection
     @section('content')
     @if ( !$actividades->count() )
@@ -10,7 +10,7 @@
       @foreach( $actividades as $actividad )
       <div class="list-group">
         <div class="list-group-item">
-          <h3><a href="{{ url('/'.$post->slug) }}">{{ $actividad->title }}</a>
+          <h3><a href="<?php //{{ url('/'.$actividades->slug) }}?>">{{ $actividad->nombre }}</a>
             @if(!Auth::guest() && ($actividad->author_id == Auth::user()->id || Auth::user()->is_admin()))
               @if($actividad->active == '1')
               <button class="btn" style="float: right"><a href="{{ url('edit/'.$actividad->slug)}}">Edit Activity</a></button>
