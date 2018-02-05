@@ -1,18 +1,14 @@
   <footer> 
     <div class="contentFoot"> 
       <div> 
-        <h3>SECCIÓN 1</h3> 
-        <ul>  
-          <li><a href="#">Subsección 1</a></li> 
-          <li><a href="#">Subsección 2</a></li> 
-          <li><a href="#">Subsección 3</a></li> 
-          <li><a href="#">Subsección 4</a></li> 
-        </ul> 
-        <h3>SECCIÓN 2</h3> 
+        <h3><a href="{{ asset('/index.php/noticias') }}">Noticias</a></h3> 
+        <h3><a href="{{ asset('/index.php/informacion') }}">INFORMACIÓN</a></h3> 
         <ul> 
-          <li><a href="#">Subsección 1</a></li> 
-          <li><a href="#">Subsección 2</a></li> 
-          <li><a href="#">Subsección 3</a></li> 
+          <li><a href="{{ asset('/index.php/como-llegar') }}">Cómo llegar</a></li> 
+          <li><a href="{{ asset('/index.php/instalaciones') }}">Instalaciones</a></li> 
+          <li><a href="{{ asset('/index.php/faq') }}">F.A.Q</a></li> 
+          <li><a href="{{ asset('/index.php/normas') }}">Normas</a></li> 
+          <li><a href="{{ asset('/index.php/lugares') }}">Lugares de interés</a></li> 
         </ul> 
       </div> 
       <div> 
@@ -23,9 +19,10 @@
           <li><a href="{{ asset('/index.php/rev') }}">Rol en Vivo</a></li> 
           <li><a href="{{ asset('/index.php/otras') }}">Otras actividades</a></li>
         </ul> 
-        <h3>SECCIÓN 4</h3> 
+        <h3>CONTACTO</h3> 
         <ul> 
-          <li><a href="#">Contacto</a></li> 
+          <li><a href="#">Proponer actividad</a></li> 
+          <li><a href="#">Realizar inscripción</a></li> 
         </ul>  
       </div> 
       <div>  

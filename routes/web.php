@@ -99,15 +99,22 @@ Contacto
 
 
 // PAGINAS //
-Route::get('/como-llegar', function () {
-	$posts = App\Post::all();
-	return view('noticias', compact('posts'));
+Route::get('/informacion', function () {
+	$pages = App\Page::all();
+	return view('paginas', compact('pages'));
 });
-Route::get('/instalaciones', function () {
-	$posts = App\Post::all();
-	return view('noticias', compact('posts'));
+
+/*Route::get('/como-llegar', function () {
+	$page = App\Page::where('slug', '=', $slug)->firstOrFail();
+	return view('pagina', compact('page'));
+});*/
+
+Route::get('{slug}', function($slug){
+	$page = App\Page::where('slug', '=', $slug)->firstOrFail();
+	return view('pagina', compact('page'));
 });
-Route::get('/faq', function () {
+
+/*Route::get('/faq', function () {
 	$posts = App\Post::all();
 	return view('noticias', compact('posts'));
 });
@@ -118,7 +125,7 @@ Route::get('/normas', function () {
 Route::get('/lugares', function () {
 	$posts = App\Post::all();
 	return view('noticias', compact('posts'));
-});
+});*/
 // ACTIVIDADES //
 Route::get('/rol', function () {
 	$posts = App\Post::all();

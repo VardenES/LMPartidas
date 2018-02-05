@@ -29,7 +29,7 @@
         <li> 
           <a href="{{ asset('/index.php/noticias') }}">NOTICIAS</a> 
         </li> 
-        <li> <a>INFORMACIÓN</a> 
+        <li> <a href="{{ asset('/index.php/informacion') }}">INFORMACIÓN</a> 
           <ul class="submenu" style="display: none; height: 116px; padding-top: 5px; margin-top: 0px; padding-bottom: 0px; margin-bottom: 0px;"> 
             <li><a href="{{ asset('/index.php/como-llegar') }}">CÓMO LLEGAR</a></li> 
             <li><a href="{{ asset('/index.php/instalaciones') }}">INSTALACIONES</a></li> 
