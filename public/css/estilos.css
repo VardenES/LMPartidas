@@ -142,24 +142,74 @@ header a.logo img{width:100%}
 	section.homeHeader .owl-carousel .item.backprueba1{background-image:url(../img/home/headerprueba1.jpg)}
 	section.homeHeader .owl-carousel .item.backprueba2{background-image:url(../img/home/headerprueba2.jpg)}
 	section.homeHeader .owl-theme .owl-nav.disabled+.owl-dots{margin-top:10px;position:absolute;bottom:0;right:0}
-	section.homeHeader .owl-prev{
-		background:url(../img/home/izq.png) center/cover!important;
-		height:58px;left:9px;
-		margin-top:-29px!important;
-		padding:0!important;
-		position:absolute;
-		text-indent:-9999px;top:50%;width:48px;z-index:2;cursor:pointer}
-	section.homeHeader .owl-next{
-		background:url(../img/home/der.png) center/cover!important;
-		height:58px;right:9px;margin-top:-29px!important;
-		padding:0!important;
-		position:absolute;
-		text-indent:-9999px;top:50%;width:48px;z-index:2;
-		cursor:pointer}
-	a.down{position:absolute;background:url(../img/down.png);bottom:15px;width:54px;height:54px;left:50%;margin-left:-27px;background-size:cover;cursor:pointer;z-index:9}section.homeHeader .content{position:absolute;width:578px;min-height:320px;display:table;left:23%;top:29%;margin-left:-289px}section.homeHeader .content h1{font-family:back_to_black_demoregular;font-size:60px;line-height:110px;position:relative;text-align:center;padding:0 0 26px;color:#fff;text-shadow:2px 2px 11px #404040;background:0 0}
-
-section.homeHeader .content h1:after{display:block;content:'';border-bottom:2px solid #fff;
-	width:100px;position:absolute;top:6;left:50%;margin-left:-50px;box-shadow:2px 2px 11px #404040}
+section.homeHeader .owl-prev{
+	background:url(../img/home/izq.png) center/cover!important;
+	height:58px;
+	left:9px;
+	margin-top:-29px!important;
+	padding:0!important;
+	position:absolute;
+	text-indent:-9999px;
+	top:50%;
+	width:48px;
+	z-index:2;
+	cursor:pointer}
+section.homeHeader .owl-next{
+	background:url(../img/home/der.png) center/cover!important;
+	height:58px;
+	right:9px;
+	margin-top:-29px!important;
+	padding:0!important;
+	position:absolute;
+	text-indent:-9999px;
+	top:50%;
+	width:48px;
+	z-index:2;
+	cursor:pointer
+}
+a.down{
+	position:absolute;
+	background:url(../img/down.png);
+	bottom:15px;
+	width:54px;
+	height:54px;
+	left:50%;
+	margin-left:-27px;
+	background-size:cover;
+	cursor:pointer;
+	z-index:9
+}
+section.homeHeader .content{
+	position:absolute;
+	width:578px;
+	min-height:320px;
+	display:table;
+	left:23%;
+	top:29%;
+	margin-left:-289px
+}
+section.homeHeader .content h1{
+	font-family:back_to_black_demoregular;
+	font-size:60px;
+	line-height:110px;
+	position:relative;
+	text-align:center;
+	padding:0 0 26px;
+	color:#fff;
+	text-shadow:2px 2px 11px #404040;
+	background:0 0
+}
+section.homeHeader .content h1:after{
+	display:block;
+	content:'';
+	border-bottom:2px solid #fff;
+	width:100px;
+	position:absolute;
+	top:6;
+	left:50%;
+	margin-left:-50px;
+	box-shadow:2px 2px 11px #404040
+}
 section.homeHeader .content p{
 	width:80%;margin:0 10% 10px;font-family:Raleway;font-weight:500;
 	color:#fff;font-size:40px;text-align:center;text-shadow:2px 2px 11px #404040}
@@ -688,11 +738,20 @@ div.wrapper.cat{
 section.catHeaderNew{
 	height:550px;
 	margin:0 auto;
-	max-width:1976px;width:100%}
+	max-width:1976px;
+	width:100%}
 section.catHeaderNew .content{
 	background-color:rgba(255,255,255,.75);
-	height:320px;left:50%;margin-left:-500px;max-width:1000px;position:absolute;
-	width:100%;min-height:320px;display:table;top:200px}
+	height:320px;
+	left:50%;
+	margin-left:-500px;
+	max-width:1000px;
+	position:absolute;
+	width:100%;
+	min-height:320px;
+	display:table;
+	top:200px
+}
 section.catHeaderNew .content aside{
 	display:table-cell;vertical-align:middle}
 section.catHeaderNew .content h1{
@@ -702,13 +761,26 @@ section.catHeaderNew .content h1:after{
 	display:block;content:'';border-bottom:2px solid #464646;width:100px;position:absolute;
 	top:6;left:50%;margin-left:-50px}
 section.catHeaderNew .content p{
-	width:90%;margin:0 5% 20px;font-family:Raleway;font-weight:400;color:#404040;
-	font-size:19px;text-align:center;line-height:24px}
-.categoriasCont{width:100%;display:block;float:left}
+	width:90%;
+	margin:0 5% 20px;
+	font-family:Raleway;
+	font-weight:400;
+	color:#404040;
+	font-size:19px;
+	text-align:center;
+	line-height:24px}
+.categoriasCont{
+	width:100%;
+	display:block;
+	float:left}
 .categoriasCont article{
-	float:left;width:50%;box-sizing:border-box;-webkit-transition:all .4s ease-in-out 0s;
-	-moz-transition:all .4s ease-in-out 0s;-o-transition:all .4s ease-in-out 0s;
-	transition:all .4s ease-in-out 0s;position:relative;background-size:cover;
+	float:left;width:50%;
+	box-sizing:border-box;
+	-webkit-transition:all .4s ease-in-out 0s;
+	-moz-transition:all .4s ease-in-out 0s;
+	-o-transition:all .4s ease-in-out 0s;
+	transition:all .4s ease-in-out 0s;
+	position:relative;background-size:cover;
 	background-position:center center}
 .categoriasCont article.ensaladas-pic-nic{
 	background-image:url(../img/categoria/ensaladas-pic-nic.jpg)}
@@ -910,7 +982,7 @@ section.productInfo .imagenPrincipal a{
 section.productInfo .textoPrincipal{
 	float:right;max-width:594px;width:calc(100% - 466px);min-height:auto}
 section.productInfo .textoPrincipal .etiqueta{
-	width:100%;height:298px;background-image:url(../img/etiquetaPlato.png);
+	width:100%;height:298px;background-image:url(http://www.carretilla.info/img/etiquetaPlato.png);
 	box-sizing:border-box;padding:10px 30px;margin-top:55px;background-position:right top}
 section.productInfo .textoPrincipal .etiqueta.conserva{display:table}
 section.productInfo .textoPrincipal .etiqueta h1{

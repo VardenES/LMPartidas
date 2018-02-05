@@ -1,11 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Homepage</title>
-	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
-</head>
-<body>
+@extends('layouts.myrteahead')
 
+  <section class="homeHeader"> 
 	<div class="container">
 		<br><br>
 		<div class="row">
@@ -20,5 +15,7 @@
 		</div>
 	</div>
 
-</body>
-</html>
+
+  </section> 
+
+@extends('layouts.myrteafooter')
