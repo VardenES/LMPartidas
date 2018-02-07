@@ -188,17 +188,36 @@ Route::get('bootstrap', function (){
 
 
 
+/* // franja //
+"Viernes Mañana"
+"Viernes Noche"
+"Sábado Mañana"
+"Sábado Tarde"
+"Sábado Noche"
+"Domingo Mañana"
+"Domingo Tarde"
+*/
+
+
 
 Route::get('/actividades', function () {
 	$actividades = App\Actividade::all();
 	return view('actividades0', compact('actividades'));
 });
 Route::get('/rol', function () {
-	$actividades = App\Actividade::where('tipo', '=', '1')->get();
+	$actividades = App\Actividade::where('tipo', '=', 'ROL')->get();
 	return view('actividades0', compact('actividades'));
 });
 Route::get('/mesa', function () {
-	$actividades = App\Actividade::where('tipo', '=', '2')->get();
+	$actividades = App\Actividade::where('tipo', '=', 'JDM')->get();
+	return view('actividades0', compact('actividades'));
+});
+Route::get('/rev', function () {
+	$actividades = App\Actividade::where('tipo', '=', 'REV')->get();
+	return view('actividades0', compact('actividades'));
+});
+Route::get('/otros', function () {
+	$actividades = App\Actividade::where('tipo', '=', 'OTROS')->get();
 	return view('actividades0', compact('actividades'));
 });
 
