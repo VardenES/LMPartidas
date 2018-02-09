@@ -12,10 +12,10 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('myrthome'); //welcome
 });
 
-Route::get('/create', function(){
+/*Route::get('/create', function(){
 	return view('create');
 });
 
@@ -25,7 +25,7 @@ Route::get('/register', function(){
 
 Route::get('/inicio', function () {
     return view('create');
-});
+});*/
 
 Route::get('/noticias', function () {
 	$posts = App\Post::all();
@@ -40,10 +40,28 @@ Route::get('post/{slug}', function($slug){
 
 // http://www.easylaravelbook.com/blog/2015/03/09/passing-multiple-variables-into-a-laravel-5-view/
 // La idea es pasar por día todos los valores de franjas horarias y actividades y que el filtro lo realice en la vista.
-Route::get('/actividades/{slug}', function ($slug) {
-	$posts = App\Post::where('category_id', '=', $slug)->get();
-	return view('viernes', compact('posts'));
+
+Route::get('/actividades', function () {
+	$actividades = App\Actividade::all();
+	return view('actividades', compact('actividades'));	
+
+
 });
+
+Route::get('/informacion', function () {
+	$pages = App\Page::all();
+	return view('paginas', compact('pages'));
+});
+
+
+
+
+Route::get('/actividad/{slug}', function ($slug) {
+	//$actividades = App\Actividade::where('tipo', '=', $slug)->firstOrFail();
+	$actividades = App\Actividade::all();		
+	return view('actividades', compact('actividades'));	
+});
+
 
 Route::get('/usuarios', function () {
 	$usuarios = App\User::all();
@@ -76,6 +94,7 @@ Route::group(['prefix' => 'admin'], function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
 
 
 /*
@@ -126,23 +145,8 @@ Route::get('/lugares', function () {
 	$posts = App\Post::all();
 	return view('noticias', compact('posts'));
 });*/
-// ACTIVIDADES //
-Route::get('/rol', function () {
-	$posts = App\Post::all();
-	return view('noticias', compact('posts'));
-});
-Route::get('/rev', function () {
-	$posts = App\Post::all();
-	return view('noticias', compact('posts'));
-}); 
-Route::get('/mesa', function () {
-	$posts = App\Post::all();
-	return view('noticias', compact('posts'));
-});
-Route::get('/otras', function () {
-	$posts = App\Post::all();
-	return view('noticias', compact('posts'));
-});
+
+
 
 
 // ACTIVIDADES //
@@ -198,27 +202,32 @@ Route::get('bootstrap', function (){
 "Domingo Tarde"
 */
 
-
-
-Route::get('/actividades', function () {
-	$actividades = App\Actividade::all();
-	return view('actividades0', compact('actividades'));
+Route::get('/informa', function () {
+	$pages = App\Page::first();
+	return view('paginas', compact('pages'));
 });
-Route::get('/rol', function () {
+
+/*Route::get('/actividades', function () {
+	//$actividades = App\Actividade::all();
+	//return view('actividades', compact('actividades'));
+	$pages = App\Page::all();
+	return view('paginas', compact('pages'));	
+});*/
+Route::get('actividades/rol', function () {
 	$actividades = App\Actividade::where('tipo', '=', 'ROL')->get();
-	return view('actividades0', compact('actividades'));
+	return view('actividades', compact('actividades'));
 });
-Route::get('/mesa', function () {
+Route::get('actividades/mesa', function () {
 	$actividades = App\Actividade::where('tipo', '=', 'JDM')->get();
-	return view('actividades0', compact('actividades'));
+	return view('actividades', compact('actividades'));
 });
-Route::get('/rev', function () {
+Route::get('actividades/rev', function () {
 	$actividades = App\Actividade::where('tipo', '=', 'REV')->get();
-	return view('actividades0', compact('actividades'));
+	return view('actividades', compact('actividades'));
 });
-Route::get('/otros', function () {
+Route::get('actividades/otros', function () {
 	$actividades = App\Actividade::where('tipo', '=', 'OTROS')->get();
-	return view('actividades0', compact('actividades'));
+	return view('actividades', compact('actividades'));
 });
 
 Route::get('myrtea', function (){

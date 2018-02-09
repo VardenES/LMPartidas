@@ -404,10 +404,10 @@
       <div> 
         <h3>ACTIVIDADES</h3> 
         <ul> 
-          <li><a href="{{ asset('/index.php/rol') }}">Juegos de Rol</a></li> 
-          <li><a href="{{ asset('/index.php/mesa') }}">Juegos de Mesa</a></li> 
-          <li><a href="{{ asset('/index.php/rev') }}">Rol en Vivo</a></li> 
-          <li><a href="{{ asset('/index.php/otras') }}">Otras actividades</a></li>
+          <li><a href="{{ asset('/index.php/actividades/rol') }}">Juegos de Rol</a></li> 
+          <li><a href="{{ asset('/index.php/actividades/mesa') }}">Juegos de Mesa</a></li> 
+          <li><a href="{{ asset('/index.php/actividades/rev') }}">Rol en Vivo</a></li> 
+          <li><a href="{{ asset('/index.php/actividades/otras') }}">Otras actividades</a></li>
         </ul> 
         <h3>SECCIÓN 4</h3> 
         <ul> 
