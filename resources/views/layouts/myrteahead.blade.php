@@ -20,6 +20,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
     <link rel="shortcut icon" href="{{ asset('img/logo.png') }}"> 
     <link href="{{ asset('/css/estilos.css') }}" rel="stylesheet" type="text/css" media="all" charset="utf-8">
+    <link href="{{ asset('/css/ludus.css') }}" rel="stylesheet" type="text/css" media="all" charset="utf-8">
 </head>
 
 <body> 
@@ -39,7 +40,7 @@
           </ul> 
         </li> 
         <li class="logo" style="width: 130px;"> 
-          <a href="#"><img src="{{ asset('/img/logo.png') }}" alt="Logo"></a> 
+          <a href="{{ asset('/') }}"><img src="{{ asset('/img/logo.png') }}" alt="Logo"></a> 
         </li> 
         <li> <a href="{{ asset('/index.php/actividades') }}">ACTIVIDADES</a> 
           <ul class="submenu" style="display: none; height: 95px; padding-top: 5px; margin-top: 0px; padding-bottom: 0px; margin-bottom: 0px;"> 
