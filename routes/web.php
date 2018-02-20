@@ -41,11 +41,16 @@ Route::get('post/{slug}', function($slug){
 // http://www.easylaravelbook.com/blog/2015/03/09/passing-multiple-variables-into-a-laravel-5-view/
 // La idea es pasar por día todos los valores de franjas horarias y actividades y que el filtro lo realice en la vista.
 
-Route::get('/actividades', function () {
+/*Route::get('/actividades', function () {
 	$actividades = App\Actividade::all();
 	return view('actividades', compact('actividades'));	
 
+});*/
 
+Route::get('/actividadestry', function () {
+	//$actividades = App\Actividade::all();
+	//return view('calendario', compact('actividades'));	
+	return view('calendariotry');
 });
 
 Route::get('/informacion', function () {
