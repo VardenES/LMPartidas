@@ -3,7 +3,13 @@
 		<div class="wrapper"> 
 			<section class="productInfo"> 
 				<article class="imagenPrincipal"> 
-					<a href="http://www.carretilla.info/conservas-vegetales/esparragos">VOLVER</a> 
+					<a href="javascript:goBack()">VOLVER</a> 
+					
+<script>
+function goBack() {
+    window.history.back();
+}
+</script>
 					<img class="principal" src="http://www.carretilla.info/img/platos/esparragos-blancos-enteros-extra.png"> 
 					<?php //{{ Voyager::image( $post->image ) }}?>
 				</article> 

@@ -44,10 +44,10 @@
         </li> 
         <li> <a href="{{ asset('/index.php/actividades') }}">ACTIVIDADES</a> 
           <ul class="submenu" style="display: none; height: 95px; padding-top: 5px; margin-top: 0px; padding-bottom: 0px; margin-bottom: 0px;"> 
-            <li><a href="{{ asset('/index.php/actividades/rol') }}">PARTIDAS DE ROL</a></li> 
-            <li><a href="{{ asset('/index.php/actividades/mesa') }}">JUEGOS DE MESA</a></li>
-            <li><a href="{{ asset('/index.php/actividades/rev') }}">ROL EN VIVO</a></li> 
-            <li><a href="{{ asset('/index.php/actividades/otros') }}">OTRAS ACTIVIDADES</a></li>
+            <li><a href="{{ asset('/index.php/rol') }}">PARTIDAS DE ROL</a></li> 
+            <li><a href="{{ asset('/index.php/jdm') }}">JUEGOS DE MESA</a></li>
+            <li><a href="{{ asset('/index.php/rev') }}">ROL EN VIVO</a></li> 
+            <li><a href="{{ asset('/index.php/otros') }}">OTRAS ACTIVIDADES</a></li>
           </ul> 
         </li> 
         <li> <a href="#">CONTACTO</a> 

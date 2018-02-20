@@ -59,13 +59,41 @@ Route::get('/informacion', function () {
 });
 
 
+Route::get('/actividades', function () {
+	$actividades = App\Actividade::all();
+	return view('calendario', compact('actividades'));	
+	//return view('calendariotry');
+});
 
+Route::get('/rol', function () {
+	$actividades = App\Actividade::where('tipo', '=', 'ROL')->get();
+	return view('calendario', compact('actividades'));	
+	//return view('calendariotry');
+});
 
-Route::get('/actividad/{slug}', function ($slug) {
+Route::get('/jdm', function () {
+	$actividades = App\Actividade::where('tipo', '=', 'JDM')->get();
+	return view('calendario', compact('actividades'));	
+	//return view('calendariotry');
+});
+
+Route::get('/rev', function () {
+	$actividades = App\Actividade::where('tipo', '=', 'REV')->get();
+	return view('calendario', compact('actividades'));	
+	//return view('calendariotry');
+});
+
+Route::get('/otros', function () {
+	$actividades = App\Actividade::where('tipo', '=', 'OTROS')->get();
+	return view('calendario', compact('actividades'));	
+	//return view('calendariotry');
+});
+
+/*Route::get('/actividad/{slug}', function ($slug) {
 	//$actividades = App\Actividade::where('tipo', '=', $slug)->firstOrFail();
 	$actividades = App\Actividade::all();		
 	return view('actividades', compact('actividades'));	
-});
+});*/
 
 
 Route::get('/usuarios', function () {

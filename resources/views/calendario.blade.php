@@ -1,49 +1,34 @@
 @extends('layouts.myrteahead')
 
-			<section class="categoriasCont"> 
-				
-				@foreach($pages as $page)
-				<article class="esparragos efecto efecto2 animate2" style="height: 430px; background-image: url({{ Voyager::image( $page->image ) }})"> 
-					<a href="http://localhost/LMPArtidas/public/index.php/{{ $page->slug }}"> <span><h2>{{ $page->title }}</h2></span> </a>					
-				</article> 
-				@endforeach
-
-			</section> 
-			<div class="clear"></div> </div> <div class="clear"></div> 
 
 
-
-
-
-<section class="headerDecalogo"> 
+<section class="headerDecalogo" style="background-image: url('http://www.carretilla.info/img/decalogo/header.jpg')"> > 
 </section> 
-<h1>Decálogo de la Alimentación Saludable</h1> 
-<section class="decalogoCont"> 
-	<article class="efecto efecto1 animate1" style="height: 456px; background-image: url({{ Voyager::image( $page->image ) }})"> 
+<h1>Actividades</h1> 
+<section class="decalogoCont">
+<?php $i = 1; ?>
+
+@foreach($actividades as $actividad)
+	<a href="http://localhost/LMPArtidas/public/index.php/{{ $actividad->slug }}"> 
+	<?php if($i == 1){ ?>
+		<article class="efecto efecto1 animate1" style="height: 456px; background-image: url({{ $actividad->portada  }})"> 
+	<?php	$i++;
+	}elseif($i == 2){?>
+		<article class="efecto efecto2 animate2" style="height: 456px; background-image: url({{ $actividad->portada  }})"> 
+	<?php	$i++;
+	}elseif($i == 3){?>
+	<article class="efecto efecto3 animate3" style="height: 456px; background-image: url({{ $actividad->portada }})"> 
+	<?php	$i=1;
+	} ?>	
 		<span> 
-			<h2>1</h2> 
+			<h2>{{ $actividad->nombre }}</h2> 
+			<p> {{ $actividad->horario }}<?php echo "</br>".date("l h:i");?></p>
 			<p> Sigue una alimentación equilibrada, variada y ajustada a tus necesidades (estado fisiológico, actividad física, sexo, edad...).</p> 
 		</span> 
 	</article> 
-	<article class="efecto efecto2 animate2" style="height: 456px; background-image: url({{ Voyager::image( $page->image ) }})"> 
-		<span> 
-			<h2>2</h2> 
-			<p>Procura realizar 5 comidas al día. Siempre es más recomendable comer poca cantidad y de forma más frecuente.</p> 
-		</span> 
-	</article> 
-	<article class="efecto efecto3 animate3" style="height: 456px; background-image: url({{ Voyager::image( $page->image ) }})"> 
-		<span> 
-			<h2>3</h2> 
-			<p>Realiza un desayuno completo todos los días: 10-15 minutos son suficientes.</p> 
-		</span> 
-	</article> 
-	
-	<article class="efecto efecto2 animate2 last"> 
-		<span> 
-			<h2>10</h2> 
-			<p>El secreto: ¡Aliméntate de forma equilibrada, muévete y comparte hábitos saludables en familia!</p> 
-		</span> 
-	</article> 
+	</a>
+@endforeach
+
 	<div class="clear"></div> 
 </section> 
 	<div class="clear"></div> 
