@@ -266,3 +266,12 @@ Route::get('actividades/otros', function () {
 Route::get('myrtea', function (){
 	return view('myrthome');
 });
+
+
+// Contact Form
+// https://www.bnmetrics.com/blog/simple-contact-page-tutorial-laravel-54
+//Route::get('contact', 'ContactController@show');
+//Route::post('contact',  'ContactController@mailToAdmin'); 
+Route::get('/contactar', function (){
+	 return 'Hello World';
+});
